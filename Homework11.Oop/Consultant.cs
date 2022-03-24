@@ -35,7 +35,21 @@ public class ConsultantClient
     }
     public string Passport
     {
-        get { return "********"; }
+        get 
+        {
+            if (!string.IsNullOrWhiteSpace(_client.Passport))
+            {
+                return "********";
+            }
+            else
+            {
+                return "";
+            }
+        }
+        set
+        {
+
+        }
     }
 }
 

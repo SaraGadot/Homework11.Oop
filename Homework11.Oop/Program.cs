@@ -10,13 +10,21 @@ var clients = new List<Client>()
         Phone = "89031452627",
         Passport = "4569 123456",
     },
-      new Client()
+    new Client()
     {
         LastName = "Петров",
         FirstName = "Виктор",
         MiddleName = "Иванович",
         Phone = "89031467895",
         Passport = "4569 456789",
+    },
+    new Client()
+    {
+        LastName = "Сидоров",
+        FirstName = "Виктор",
+        MiddleName = "Михайлович",
+        Phone = "89031467867",
+        Passport = "",
     },
 };
 
