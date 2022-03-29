@@ -20,6 +20,10 @@ public class ConsultantClient
     public string LastName
     {
         get { return _client.LastName; }
+        set 
+        {
+            throw new Exception("Нет доступа к смене фамилии");
+        }
     }
     public string FirstName
     {

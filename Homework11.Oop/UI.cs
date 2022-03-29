@@ -40,18 +40,47 @@ internal class UI
 
     }
 
+    public void ChangeLastName()
+    {
+        var viewClients = Consultant.View(Clients);
+        Console.WriteLine("Введите номер клиента");
+        var clientIndex = Convert.ToInt32(Console.ReadLine());
+        var client = viewClients[clientIndex];
+        Console.WriteLine("Введите новую фамилию");
+        var newLastName = Console.ReadLine();
+        client.LastName = newLastName;
+    }
+
     public void Menu()
     {
         for (; ; )
         {
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1 - показать клиентов");
+            Console.WriteLine("2 - изменить фамилию");
             var action = Console.ReadLine();
-            if (action == "1")
+            try
             {
-                View();
+                switch (action)
+                {
+                    case "1":
+                        {
+                            View();
+                            break;
+                        }
+                    case "2":
+                        {
+                            ChangeLastName();
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             Console.WriteLine();
+
         }
 
                 
