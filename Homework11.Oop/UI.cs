@@ -42,12 +42,16 @@ internal class UI
 
     public void Menu()
     {
-        Console.WriteLine ("Выберите действие:");
-        Console.WriteLine("1 - показать клиентов");
-        var action = Console.ReadLine();
-        if (action == "1")
+        for (; ; )
         {
-            View();
+            Console.WriteLine("Выберите действие:");
+            Console.WriteLine("1 - показать клиентов");
+            var action = Console.ReadLine();
+            if (action == "1")
+            {
+                View();
+            }
+            Console.WriteLine();
         }
 
                 
