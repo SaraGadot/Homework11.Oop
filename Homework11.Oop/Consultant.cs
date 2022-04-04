@@ -36,6 +36,15 @@ public class ConsultantClient
     public string Phone
     {
         get { return _client.Phone; }
+        set
+        {
+           
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new Exception("Номер телефона не должен быть пустым");
+            }
+            _client.Phone = value;
+        }
     }
     public string Passport
     {
