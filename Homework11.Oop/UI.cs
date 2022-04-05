@@ -47,6 +47,20 @@ internal class UI
         var newLastName = Console.ReadLine();
         client.LastName = newLastName;
     }
+    public void ChangeFirstName()
+    {
+        var client = SelectClient(Clients);
+        Console.WriteLine("Введите новое имя");
+        var newFirstName = Console.ReadLine();
+        client.FirstName = newFirstName;
+    }
+    public void ChangeMiddleName()
+    {
+        var client = SelectClient(Clients);
+        Console.WriteLine("Введите новое отчество");
+        var newMiddleName = Console.ReadLine();
+        client.MiddleName = newMiddleName;
+    }
     public void ChangePhone()
     {
         var client = SelectClient(Clients);
@@ -71,7 +85,9 @@ internal class UI
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1 - показать клиентов");
             Console.WriteLine("2 - изменить фамилию");
-            Console.WriteLine("3 - изменить номер телефона");
+            Console.WriteLine("3 - изменить имя");
+            Console.WriteLine("4 - изменить отчество");
+            Console.WriteLine("5 - изменить номер телефона");
 
             var action = Console.ReadLine();
             try
@@ -89,6 +105,16 @@ internal class UI
                             break;
                         }
                     case "3":
+                        {
+                            ChangeFirstName();
+                            break;
+                        }
+                    case "4":
+                        {
+                            ChangeMiddleName();
+                            break;
+                        }
+                    case "5":
                         {
                             ChangePhone();
                             break;
