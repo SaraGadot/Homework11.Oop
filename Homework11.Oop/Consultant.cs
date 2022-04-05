@@ -28,10 +28,18 @@ public class ConsultantClient
     public string FirstName
     {
         get { return _client.FirstName; }
+        set
+        {
+            throw new Exception("Нет доступа к смене имени");
+        }
     }
     public string MiddleName
     {
         get { return _client.MiddleName; }
+        set
+        {
+            throw new Exception("Нет доступа к смене отчества");
+        }
     }
     public string Phone
     {

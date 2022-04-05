@@ -42,24 +42,27 @@ internal class UI
 
     public void ChangeLastName()
     {
-        var viewClients = Consultant.View(Clients);
-        Console.WriteLine("Введите номер клиента");
-        var clientIndex = Convert.ToInt32(Console.ReadLine());
-        var client = viewClients[clientIndex];
+        var client = SelectClient(Clients);
         Console.WriteLine("Введите новую фамилию");
         var newLastName = Console.ReadLine();
         client.LastName = newLastName;
     }
     public void ChangePhone()
     {
-        var viewClients = Consultant.View(Clients);
-        Console.WriteLine("Введите номер клиента");
-        var clientIndex = Convert.ToInt32(Console.ReadLine()) - 1;
-        var client = viewClients[clientIndex];
+        var client = SelectClient(Clients);
         Console.WriteLine("Введите новый номер телефона");
         var newPhone = Console.ReadLine();
         client.Phone = newPhone;
     }
+
+    public ConsultantClient SelectClient(List<Client> clients)
+    {
+        var viewClients = Consultant.View(clients);
+        Console.WriteLine("Введите номер клиента");
+        var clientIndex = Convert.ToInt32(Console.ReadLine()) - 1;
+        return viewClients[clientIndex];
+    }
+
 
     public void Menu()
     {
