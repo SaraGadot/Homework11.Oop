@@ -45,36 +45,35 @@ internal class UI
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новую фамилию");
         var newLastName = Console.ReadLine();
-        client.LastName = newLastName;
+        Consultant.ChangeLastName(client, newLastName);
     }
     public void ChangeFirstName()
     {
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новое имя");
         var newFirstName = Console.ReadLine();
-        client.FirstName = newFirstName;
+        Consultant.ChangeFirstName(client, newFirstName);
     }
     public void ChangeMiddleName()
     {
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новое отчество");
         var newMiddleName = Console.ReadLine();
-        client.MiddleName = newMiddleName;
+        Consultant.ChangeMiddleName(client, newMiddleName);
     }
     public void ChangePhone()
     {
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новый номер телефона");
         var newPhone = Console.ReadLine();
-        client.Phone = newPhone;
+        Consultant.ChangePhone(client, newPhone);
     }
 
-    public ConsultantClient SelectClient(List<Client> clients)
+    public Client SelectClient(List<Client> clients)
     {
-        var viewClients = Consultant.View(clients);
         Console.WriteLine("Введите номер клиента");
         var clientIndex = Convert.ToInt32(Console.ReadLine()) - 1;
-        return viewClients[clientIndex];
+        return clients[clientIndex];
     }
 
 

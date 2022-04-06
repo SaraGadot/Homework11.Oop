@@ -6,6 +6,26 @@ public class Consultant
         return clients.Select(client => new ConsultantClient(client)).ToList();
        
     }
+    public void ChangeLastName(Client client, string? lastName)
+    {
+        throw new Exception("Нет доступа к смене фамилии");
+    }
+    public void ChangeFirstName(Client client, string? firstName)
+    {
+        throw new Exception("Нет доступа к смене имени");
+    }
+    public void ChangeMiddleName(Client client, string? middleName)
+    {
+        throw new Exception("Нет доступа к смене отчества");
+    }
+    public void ChangePhone(Client client, string? phone)
+    {
+        if (string.IsNullOrWhiteSpace(phone))
+        {
+            throw new Exception("Номер телефона не должен быть пустым");
+        }
+        client.Phone = phone;
+    }
 
 }
 
