@@ -32,8 +32,8 @@ internal class UI
 
     public void View()
     {
-        var viewClients = Consultant.View(Clients);
-        foreach (var client in viewClients)
+        var clients = Consultant.View(Clients);
+        foreach (var client in clients)
         {
             Console.WriteLine($"{client.LastName} {client.FirstName} {client.MiddleName} {client.Phone} {client.Passport}");
         }
