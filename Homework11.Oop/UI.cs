@@ -28,9 +28,8 @@ internal class UI
                 Passport = "",
             },
         };
-    //public Consultant Consultant = new Consultant();
-    public Consultant Employee = new Manager();
-
+    public Consultant Employee = new Consultant();
+   
     public void View()
     {
         var clients = Employee.View(Clients);
@@ -77,6 +76,17 @@ internal class UI
         return clients[clientIndex];
     }
 
+    public void SwitchEmployee()
+    {
+        if (Employee is Manager)
+        {
+            Employee = new Consultant();
+        }
+        else
+        {
+            Employee = new Manager();
+        }
+    }
 
     public void Menu()
     {
@@ -88,6 +98,7 @@ internal class UI
             Console.WriteLine("3 - изменить имя");
             Console.WriteLine("4 - изменить отчество");
             Console.WriteLine("5 - изменить номер телефона");
+            Console.WriteLine("6 - Консультант <-> Менеджер");
 
             var action = Console.ReadLine();
             try
@@ -117,6 +128,11 @@ internal class UI
                     case "5":
                         {
                             ChangePhone();
+                            break;
+                        }
+                    case "6":
+                        {
+                            SwitchEmployee();
                             break;
                         }
                 }
