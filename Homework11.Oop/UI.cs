@@ -29,11 +29,11 @@ internal class UI
             },
         };
     //public Consultant Consultant = new Consultant();
-    public Consultant Consultant = new Manager();
+    public Consultant Employee = new Manager();
 
     public void View()
     {
-        var clients = Consultant.View(Clients);
+        var clients = Employee.View(Clients);
         foreach (var client in clients)
         {
             Console.WriteLine($"{client.LastName} {client.FirstName} {client.MiddleName} {client.Phone} {client.Passport}");
@@ -46,28 +46,28 @@ internal class UI
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новую фамилию");
         var newLastName = Console.ReadLine();
-        Consultant.ChangeLastName(client, newLastName);
+        Employee.ChangeLastName(client, newLastName);
     }
     public void ChangeFirstName()
     {
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новое имя");
         var newFirstName = Console.ReadLine();
-        Consultant.ChangeFirstName(client, newFirstName);
+        Employee.ChangeFirstName(client, newFirstName);
     }
     public void ChangeMiddleName()
     {
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новое отчество");
         var newMiddleName = Console.ReadLine();
-        Consultant.ChangeMiddleName(client, newMiddleName);
+        Employee.ChangeMiddleName(client, newMiddleName);
     }
     public void ChangePhone()
     {
         var client = SelectClient(Clients);
         Console.WriteLine("Введите новый номер телефона");
         var newPhone = Console.ReadLine();
-        Consultant.ChangePhone(client, newPhone);
+        Employee.ChangePhone(client, newPhone);
     }
 
     public Client SelectClient(List<Client> clients)
