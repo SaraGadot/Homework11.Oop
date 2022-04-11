@@ -28,7 +28,8 @@ internal class UI
                 Passport = "",
             },
         };
-    public Consultant Consultant = new Consultant();
+    //public Consultant Consultant = new Consultant();
+    public Consultant Consultant = new Manager();
 
     public void View()
     {

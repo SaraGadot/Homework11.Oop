@@ -29,7 +29,7 @@ public class Consultant
         }
     }
 
-    public void ChangeLastName(Client client, string? lastName)
+    public virtual void ChangeLastName(Client client, string? lastName)
     {
         throw new Exception("Нет доступа к смене фамилии");
     }
