@@ -1,6 +1,13 @@
 ﻿namespace Homework11.Oop;
 public class Consultant
 {
+    public virtual EmployeeKind EmployeeKind
+    {
+        get
+        {
+            return EmployeeKind.Consultant;
+        }
+    }
     public List<Client> View(List<Client> clients)
     {
         return clients.Select(client => TransformClient(client)).ToList();

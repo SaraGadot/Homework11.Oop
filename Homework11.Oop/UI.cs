@@ -92,6 +92,7 @@ internal class UI
     {
         for (; ; )
         {
+            Console.WriteLine($"Вы - {Employee.EmployeeKind}");
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1 - показать клиентов");
             Console.WriteLine("2 - изменить фамилию");
