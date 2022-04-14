@@ -1,34 +1,13 @@
 ﻿namespace Homework11.Oop;
 internal class UI
 {
-    public List<Client> Clients = new List<Client>()
-        {
-            new Client()
-            {
-                LastName = "Иванов",
-                FirstName = "Иван",
-                MiddleName = "Иванович",
-                Phone = "89031452627",
-                Passport = "4569 123456",
-            },
-            new Client()
-            {
-                LastName = "Петров",
-                FirstName = "Виктор",
-                MiddleName = "Иванович",
-                Phone = "89031467895",
-                Passport = "4569 456789",
-            },
-            new Client()
-            {
-                LastName = "Сидоров",
-                FirstName = "Виктор",
-                MiddleName = "Михайлович",
-                Phone = "89031467867",
-                Passport = "",
-            },
-        };
+    public List<Client> Clients;
     public Consultant Employee = new Consultant();
+
+    public UI(List<Client> clients)
+    {
+        Clients = clients;
+    }
    
     public void View()
     {
