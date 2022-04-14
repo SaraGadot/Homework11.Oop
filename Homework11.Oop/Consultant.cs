@@ -40,21 +40,25 @@ public class Consultant
     {
         throw new Exception("Нет доступа к смене фамилии");
     }
-    public void ChangeFirstName(Client client, string? firstName)
+    public virtual void ChangeFirstName(Client client, string? firstName)
     {
         throw new Exception("Нет доступа к смене имени");
     }
-    public void ChangeMiddleName(Client client, string? middleName)
+    public virtual void ChangeMiddleName(Client client, string? middleName)
     {
         throw new Exception("Нет доступа к смене отчества");
     }
-    public void ChangePhone(Client client, string? phone)
+    public virtual void ChangePhone(Client client, string? phone)
     {
         if (string.IsNullOrWhiteSpace(phone))
         {
             throw new Exception("Номер телефона не должен быть пустым");
         }
         client.Phone = phone;
+    }
+    public virtual void ChangePassport(Client client, string? passport)
+    {
+        throw new Exception("Нет доступа к смене паспорта");
     }
 
 }

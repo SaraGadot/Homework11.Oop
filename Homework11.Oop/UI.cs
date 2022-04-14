@@ -68,6 +68,13 @@ internal class UI
         var newPhone = Console.ReadLine();
         Employee.ChangePhone(client, newPhone);
     }
+    public void ChangePassport()
+    {
+        var client = SelectClient(Clients);
+        Console.WriteLine("Введите новые серию и номер паспорта");
+        var newPassport = Console.ReadLine();
+        Employee.ChangePassport(client, newPassport);
+    }
 
     public Client SelectClient(List<Client> clients)
     {
@@ -99,7 +106,8 @@ internal class UI
             Console.WriteLine("3 - изменить имя");
             Console.WriteLine("4 - изменить отчество");
             Console.WriteLine("5 - изменить номер телефона");
-            Console.WriteLine("6 - Консультант <-> Менеджер");
+            Console.WriteLine("6 - изменить серию и номер паспорта");
+            Console.WriteLine("7 - Консультант <-> Менеджер");
 
             var action = Console.ReadLine();
             try
@@ -132,6 +140,11 @@ internal class UI
                             break;
                         }
                     case "6":
+                        {
+                            ChangePassport();
+                            break;
+                        }
+                    case "7":
                         {
                             SwitchEmployee();
                             break;
