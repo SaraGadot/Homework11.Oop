@@ -6,5 +6,16 @@ public class Client
     public string? MiddleName;
     public string? Phone;
     public string? Passport;
+
+    public DateTime? ChangeTime;
+    public string? ChangeField;
+    public ChangeKind? ChangeKind;
+    public EmployeeKind? Changer;
+
+}
+public enum ChangeKind
+{
+    Change,
+    Add
 }
 

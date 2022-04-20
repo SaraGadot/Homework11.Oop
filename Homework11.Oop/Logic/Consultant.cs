@@ -55,6 +55,8 @@ public class Consultant
             throw new Exception("Номер телефона не должен быть пустым");
         }
         client.Phone = phone;
+
+     
     }
     public virtual void ChangePassport(Client client, string? passport)
     {
