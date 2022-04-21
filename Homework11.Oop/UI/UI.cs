@@ -14,7 +14,8 @@ internal class UI
         var clients = Employee.View(Clients);
         foreach (var client in clients)
         {
-            Console.WriteLine($"{client.LastName} {client.FirstName} {client.MiddleName} {client.Phone} {client.Passport}");
+            Console.WriteLine($"{client.LastName} {client.FirstName} {client.MiddleName} {client.Phone} {client.Passport}" +
+                $" {client.ChangeTime} {client.ChangeField} {client.ChangeKind} {client.Changer}");
         }
 
     }

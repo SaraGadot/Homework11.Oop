@@ -22,6 +22,10 @@ public class Consultant
             MiddleName = client.MiddleName,
             Phone = client.Phone,
             Passport = TransformPassport(client.Passport),
+            ChangeTime = client.ChangeTime,
+            ChangeField = client.ChangeField,
+            ChangeKind = client.ChangeKind,
+            Changer = client.Changer,
         };
     }
     private string? TransformPassport(string? passpotr)
@@ -56,6 +60,8 @@ public class Consultant
         }
         client.Phone = phone;
 
+
+        LogChange(client, nameof(client.Phone));
      
     }
     public virtual void ChangePassport(Client client, string? passport)
@@ -63,6 +69,13 @@ public class Consultant
         throw new Exception("Нет доступа к смене паспорта");
     }
 
+    protected void LogChange(Client client, string fieldName)
+    {
+        client.ChangeTime = DateTime.Now;
+        client.ChangeField = fieldName;
+        client.ChangeKind = ChangeKind.Change;
+        client.Changer = EmployeeKind;
+    }
 }
 
 
