@@ -81,6 +81,7 @@ internal class UI
         {
             Console.WriteLine($"Вы - {Employee.EmployeeKind}");
             Console.WriteLine("Выберите действие:");
+            Console.WriteLine("0 - выйти");
             Console.WriteLine("1 - показать клиентов");
             Console.WriteLine("2 - изменить фамилию");
             Console.WriteLine("3 - изменить имя");
@@ -92,6 +93,10 @@ internal class UI
             var action = Console.ReadLine();
             try
             {
+                if(action == "0")
+                {
+                    break;
+                }
                 switch (action)
                 {
                     case "1":
