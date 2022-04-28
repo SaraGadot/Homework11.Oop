@@ -2,7 +2,7 @@
 internal class UI
 {
     public List<Client> Clients;
-    public Consultant Employee = new Consultant();
+    public IEmployee Employee = new Consultant();
 
     public UI(List<Client> clients)
     {

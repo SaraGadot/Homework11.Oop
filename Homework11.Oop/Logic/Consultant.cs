@@ -1,5 +1,5 @@
 ﻿namespace Homework11.Oop;
-public class Consultant
+public class Consultant: IEmployee
 {
     public virtual EmployeeKind EmployeeKind
     {
