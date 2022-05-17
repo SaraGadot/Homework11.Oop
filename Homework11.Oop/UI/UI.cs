@@ -75,6 +75,11 @@ internal class UI
         }
     }
 
+    public void AddClient()
+    {
+        //Employee.AddClient(Clients, new Client());
+    }
+
     public void Menu()
     {
         for (; ; )
@@ -89,6 +94,7 @@ internal class UI
             Console.WriteLine("5 - изменить номер телефона");
             Console.WriteLine("6 - изменить серию и номер паспорта");
             Console.WriteLine("7 - Консультант <-> Менеджер");
+            Console.WriteLine("8 - добавить клиента");
 
             var action = Console.ReadLine();
             try
@@ -132,6 +138,11 @@ internal class UI
                     case "7":
                         {
                             SwitchEmployee();
+                            break;
+                        }
+                    case "8":
+                        {
+                            AddClient();
                             break;
                         }
                 }

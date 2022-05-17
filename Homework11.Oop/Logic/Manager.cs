@@ -5,6 +5,11 @@ internal class Manager: Consultant
     {
         get { return EmployeeKind.Manager; }
     }
+
+    public void AddClient(ClientStorage storage, Client client)
+    {
+        storage.AddClient(client); 
+    }
     public override void ChangeLastName(Client client, string? lastName)
     {
         client.LastName = lastName;
