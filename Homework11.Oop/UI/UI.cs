@@ -1,17 +1,17 @@
 ﻿namespace Homework11.Oop;
 internal class UI
 {
-    public List<Client> Clients;
+    public ClientStorage ClientStorage;
     public IEmployee Employee = new Consultant();
 
-    public UI(List<Client> clients)
+    public UI(ClientStorage clientStorage)
     {
-        Clients = clients;
+        ClientStorage = clientStorage;
     }
    
     public void View()
     {
-        var clients = Employee.View(Clients);
+        var clients = Employee.View(ClientStorage.Clients);
         foreach (var client in clients)
         {
             Console.WriteLine($"{client.LastName} {client.FirstName} {client.MiddleName} {client.Phone} {client.Passport}" +
@@ -22,45 +22,45 @@ internal class UI
 
     public void ChangeLastName()
     {
-        var client = SelectClient(Clients);
+        var client = SelectClient(ClientStorage);
         Console.WriteLine("Введите новую фамилию");
         var newLastName = Console.ReadLine();
         Employee.ChangeLastName(client, newLastName);
     }
     public void ChangeFirstName()
     {
-        var client = SelectClient(Clients);
+        var client = SelectClient(ClientStorage);
         Console.WriteLine("Введите новое имя");
         var newFirstName = Console.ReadLine();
         Employee.ChangeFirstName(client, newFirstName);
     }
     public void ChangeMiddleName()
     {
-        var client = SelectClient(Clients);
+        var client = SelectClient(ClientStorage);
         Console.WriteLine("Введите новое отчество");
         var newMiddleName = Console.ReadLine();
         Employee.ChangeMiddleName(client, newMiddleName);
     }
     public void ChangePhone()
     {
-        var client = SelectClient(Clients);
+        var client = SelectClient(ClientStorage);
         Console.WriteLine("Введите новый номер телефона");
         var newPhone = Console.ReadLine();
         Employee.ChangePhone(client, newPhone);
     }
     public void ChangePassport()
     {
-        var client = SelectClient(Clients);
+        var client = SelectClient(ClientStorage);
         Console.WriteLine("Введите новые серию и номер паспорта");
         var newPassport = Console.ReadLine();
         Employee.ChangePassport(client, newPassport);
     }
 
-    public Client SelectClient(List<Client> clients)
+    public Client SelectClient(ClientStorage clientStorage)
     {
         Console.WriteLine("Введите номер клиента");
         var clientIndex = Convert.ToInt32(Console.ReadLine()) - 1;
-        return clients[clientIndex];
+        return clientStorage.Clients[clientIndex];
     }
 
     public void SwitchEmployee()

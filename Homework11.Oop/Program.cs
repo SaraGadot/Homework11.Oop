@@ -27,7 +27,11 @@ var clients = new List<Client>()
                 Passport = "",
             },
         };
-var ui = new UI(clients);
+var clientStorage = new ClientStorage() 
+{
+    Clients = clients
+};
+var ui = new UI(clientStorage);
 ui.Menu();
 
 
