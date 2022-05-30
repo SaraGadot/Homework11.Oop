@@ -8,7 +8,9 @@ internal class Manager: Consultant
 
     public override void AddClient(ClientStorage storage, Client client)
     {
-        storage.AddClient(client); 
+        storage.AddClient(client);
+
+        LogChange(client, "", ChangeKind.Add);
     }
     public override void ChangeLastName(Client client, string? lastName)
     {

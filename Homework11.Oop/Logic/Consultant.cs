@@ -74,11 +74,11 @@ public class Consultant: IEmployee
         throw new Exception("Нет доступа к смене паспорта");
     }
 
-    protected void LogChange(Client client, string fieldName)
+    protected void LogChange(Client client, string fieldName, ChangeKind changeKind = ChangeKind.Change)
     {
         client.ChangeTime = DateTime.Now;
         client.ChangeField = fieldName;
-        client.ChangeKind = ChangeKind.Change;
+        client.ChangeKind = changeKind;
         client.Changer = EmployeeKind;
     }
 }
