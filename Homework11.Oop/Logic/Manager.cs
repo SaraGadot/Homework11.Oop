@@ -6,7 +6,7 @@ internal class Manager: Consultant
         get { return EmployeeKind.Manager; }
     }
 
-    public void AddClient(ClientStorage storage, Client client)
+    public override void AddClient(ClientStorage storage, Client client)
     {
         storage.AddClient(client); 
     }

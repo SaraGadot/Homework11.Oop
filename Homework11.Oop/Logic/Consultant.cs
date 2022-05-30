@@ -40,6 +40,11 @@ public class Consultant: IEmployee
         }
     }
 
+    public virtual void AddClient(ClientStorage storage, Client client)
+    {
+        throw new Exception("Нет доступа к добавлению клиента");
+    }
+
     public virtual void ChangeLastName(Client client, string? lastName)
     {
         throw new Exception("Нет доступа к смене фамилии");

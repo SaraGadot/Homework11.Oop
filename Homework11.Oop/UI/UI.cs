@@ -77,7 +77,26 @@ internal class UI
 
     public void AddClient()
     {
-        //Employee.AddClient(Clients, new Client());
+        Console.WriteLine("Введите фамилию");
+        var lastName = Console.ReadLine();
+        Console.WriteLine("Введите имя");
+        var firstName = Console.ReadLine();
+        Console.WriteLine("Введите отчество");
+        var middleName = Console.ReadLine();
+        Console.WriteLine("Введите номер телефона");
+        var phone = Console.ReadLine();
+        Console.WriteLine("Введите серию и номер паспорта");
+        var passport = Console.ReadLine();
+
+        var client = new Client() 
+        {
+            LastName = lastName,
+            FirstName = firstName,
+            MiddleName = middleName,
+            Phone = phone,
+            Passport = passport
+        };
+        Employee.AddClient(ClientStorage, client);
     }
 
     public void Menu()

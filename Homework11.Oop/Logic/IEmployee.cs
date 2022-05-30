@@ -5,7 +5,7 @@ internal interface IEmployee
     EmployeeKind EmployeeKind { get; }
     List<Client> View(List<Client> clients);
 
-    //void AddClient(ClientStorage storage, Client client);
+    void AddClient(ClientStorage storage, Client client);
 
     void ChangeLastName(Client client, string? lastName);
 
