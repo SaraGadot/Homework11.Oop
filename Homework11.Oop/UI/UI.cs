@@ -26,6 +26,8 @@ internal class UI
         Console.WriteLine("Введите новую фамилию");
         var newLastName = Console.ReadLine();
         Employee.ChangeLastName(client, newLastName);
+
+        ClientStorage.Save();
     }
     public void ChangeFirstName()
     {
@@ -33,6 +35,8 @@ internal class UI
         Console.WriteLine("Введите новое имя");
         var newFirstName = Console.ReadLine();
         Employee.ChangeFirstName(client, newFirstName);
+
+        ClientStorage.Save();
     }
     public void ChangeMiddleName()
     {
@@ -40,6 +44,8 @@ internal class UI
         Console.WriteLine("Введите новое отчество");
         var newMiddleName = Console.ReadLine();
         Employee.ChangeMiddleName(client, newMiddleName);
+
+        ClientStorage.Save();
     }
     public void ChangePhone()
     {
@@ -47,6 +53,8 @@ internal class UI
         Console.WriteLine("Введите новый номер телефона");
         var newPhone = Console.ReadLine();
         Employee.ChangePhone(client, newPhone);
+
+        ClientStorage.Save();
     }
     public void ChangePassport()
     {
@@ -54,6 +62,8 @@ internal class UI
         Console.WriteLine("Введите новые серию и номер паспорта");
         var newPassport = Console.ReadLine();
         Employee.ChangePassport(client, newPassport);
+
+        ClientStorage.Save();
     }
 
     public Client SelectClient(ClientStorage clientStorage)
@@ -97,6 +107,8 @@ internal class UI
             Passport = passport
         };
         Employee.AddClient(ClientStorage, client);
+
+        ClientStorage.Save();
     }
 
     public void Menu()
