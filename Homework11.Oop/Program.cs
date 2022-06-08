@@ -1,36 +1,7 @@
 ﻿using Homework11.Oop;
 
-var clients = new List<Client>()
-        {
-            new Client()
-            {
-                LastName = "Иванов",
-                FirstName = "Иван",
-                MiddleName = "Иванович",
-                Phone = "89031452627",
-                Passport = "4569 123456",
-            },
-            new Client()
-            {
-                LastName = "Петров",
-                FirstName = "Виктор",
-                MiddleName = "Иванович",
-                Phone = "89031467895",
-                Passport = "4569 456789",
-            },
-            new Client()
-            {
-                LastName = "Сидоров",
-                FirstName = "Виктор",
-                MiddleName = "Михайлович",
-                Phone = "89031467867",
-                Passport = "",
-            },
-        };
-var clientStorage = new ClientStorage() 
-{
-    Clients = clients
-};
+var clientStorage = ClientStorage.Load();
+
 var ui = new UI(clientStorage);
 ui.Menu();
 
