@@ -1,6 +1,6 @@
 ﻿namespace Homework11.Oop;
 
-internal interface IEmployee
+public interface IEmployee
 {
     EmployeeKind EmployeeKind { get; }
     List<Client> View(List<Client> clients);

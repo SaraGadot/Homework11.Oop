@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace HomeWork11.Oop.UI
+namespace Homework11.Oop.UI
 {
     /// <summary>
     /// Interaction logic for App.xaml

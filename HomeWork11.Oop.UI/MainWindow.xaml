@@ -1,16 +1,12 @@
-﻿<Window x:Class="HomeWork11.Oop.UI.MainWindow"
+﻿<Window x:Class="Homework11.Oop.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HomeWork11.Oop.UI"
+        xmlns:local="clr-namespace:Homework11.Oop.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFF7B705">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="207*"/>
-            <ColumnDefinition Width="593*"/>
-        </Grid.ColumnDefinitions>
+    <Grid>
 
     </Grid>
 </Window>
