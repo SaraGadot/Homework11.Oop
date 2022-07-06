@@ -1,5 +1,5 @@
 ﻿namespace Homework11.Oop;
-internal class Manager: Consultant
+public class Manager: Consultant
 {
     public override EmployeeKind EmployeeKind
     {
