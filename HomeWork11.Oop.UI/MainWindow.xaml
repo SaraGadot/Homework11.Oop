@@ -18,6 +18,7 @@
                 <TextBlock Name ="Employee_TextBlock" Text="{Binding Employee.EmployeeKind}"></TextBlock>
             </StatusBarItem>
         </StatusBar>
+        <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,30,0,-31"/>
 
     </Grid>
 </Window>
