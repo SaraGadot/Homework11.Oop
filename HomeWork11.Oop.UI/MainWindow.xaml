@@ -7,18 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Menu Height="25" VerticalAlignment="Top">
-            <MenuItem Header="Сотрудник">
-                <MenuItem Header="Переключиться на консультанта" Name="ToConsultant_Menu" Click="ToConsultant_Menu_Click" />
-                <MenuItem Header="Переключиться на менеджера" Name="ToManager_Menu" Click="ToManager_Menu_Click"></MenuItem>
-            </MenuItem>
-        </Menu>
-        <StatusBar Name="sbar" VerticalAlignment="Bottom" Background="Beige">
-            <StatusBarItem>
-                <TextBlock Name ="Employee_TextBlock" Text="{Binding Employee.EmployeeKind}"></TextBlock>
-            </StatusBarItem>
-        </StatusBar>
-        <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,30,0,-31"/>
+        <DockPanel LastChildFill="True">
+            <Menu Height="25" VerticalAlignment="Top" DockPanel.Dock="Top">
+                <MenuItem Header="Сотрудник">
+                    <MenuItem Header="Переключиться на консультанта" Name="ToConsultant_Menu" Click="ToConsultant_Menu_Click" />
+                    <MenuItem Header="Переключиться на менеджера" Name="ToManager_Menu" Click="ToManager_Menu_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <StatusBar Name="sbar" VerticalAlignment="Bottom" Background="Beige" DockPanel.Dock="Bottom">
+                <StatusBarItem>
+                    <TextBlock Name ="Employee_TextBlock" Text="{Binding Employee.EmployeeKind}"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+            <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" />
+        </DockPanel>
 
     </Grid>
 </Window>
