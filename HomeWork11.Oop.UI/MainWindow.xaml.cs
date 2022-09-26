@@ -51,4 +51,20 @@ public partial class MainWindow : Window
 
         Employee_TextBlock.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
     }
+
+    private void Apply_Button_Click(object sender, RoutedEventArgs e)
+    {
+        Storage.AddClient(new Client()
+        {
+            FirstName = FirstName_TextBox.Text,
+            MiddleName = MiddleName_TextBox.Text,
+            LastName = LastName_TextBox.Text,
+            Passport = Passport_TextBox.Text,
+            Phone = Phone_TextBox.Text
+        }
+       );
+
+        Clients_Grid.ItemsSource = null;
+        Clients_Grid.ItemsSource = Storage.Clients;
+    }
 }
