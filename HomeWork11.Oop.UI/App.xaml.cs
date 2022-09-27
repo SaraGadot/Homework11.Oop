@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace Homework11.Oop.UI
 {
@@ -13,6 +14,11 @@ namespace Homework11.Oop.UI
     /// </summary>
     public partial class App : Application
     {
+        private void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
+            MessageBox.Show(e.Exception.Message);
+        }
     }
 }
 //Доработайте предыдущее задание, добавив графический пользовательский интерфейс и дополнительные функции. 
