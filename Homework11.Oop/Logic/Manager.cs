@@ -5,6 +5,10 @@ public class Manager: Consultant
     {
         get { return EmployeeKind.Manager; }
     }
+    public override List<Client> View(List<Client> clients)
+    {
+        return clients;
+    }
 
     public override void AddClient(ClientStorage storage, Client client)
     {

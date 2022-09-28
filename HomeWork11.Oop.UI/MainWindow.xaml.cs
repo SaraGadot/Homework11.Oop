@@ -33,7 +33,7 @@ public partial class MainWindow : Window
         }
         );
 
-        Clients_Grid.ItemsSource = Storage.Clients;
+        Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
     }
 
     
@@ -43,6 +43,9 @@ public partial class MainWindow : Window
         Employee = new Manager();
 
         Employee_TextBlock.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
+
+        Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
+
     }
 
     private void ToConsultant_Menu_Click(object sender, RoutedEventArgs e)
@@ -50,6 +53,9 @@ public partial class MainWindow : Window
         Employee = new Consultant();
 
         Employee_TextBlock.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
+
+        Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
+
     }
 
     private void Apply_Button_Click(object sender, RoutedEventArgs e)
@@ -66,7 +72,9 @@ public partial class MainWindow : Window
         Employee.AddClient(Storage, client);
 
         Clients_Grid.ItemsSource = null;
-        Clients_Grid.ItemsSource = Storage.Clients;
+        Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
+
+
 
         FirstName_TextBox.Text = null;
         MiddleName_TextBox.Text = null;

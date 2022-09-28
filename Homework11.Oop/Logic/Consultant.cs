@@ -8,7 +8,7 @@ public class Consultant: IEmployee
             return EmployeeKind.Consultant;
         }
     }
-    public List<Client> View(List<Client> clients)
+    public virtual List<Client> View(List<Client> clients)
     {
         return clients.Select(client => TransformClient(client)).ToList();
        
