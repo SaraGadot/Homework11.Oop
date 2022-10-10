@@ -31,10 +31,13 @@
                     </Canvas>
                 </TabItem>
                 <TabItem Header="Редактирование">
-                    <Grid Background="#FFE5E5E5"/>
+                    <Canvas Height="100" >
+                        <TextBox x:Name="Change_LastName_TextBox" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="10" Width="120"/>
+                        <Button x:Name="Change_LastName_Button" Content="Изменить фамилию" Canvas.Left="216" Canvas.Top="8" Click="Change_LastName_Button_Click"/>
+                    </Canvas>
                 </TabItem>
             </TabControl>
-            <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True"/>
+            <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionChanged="Clients_Grid_SelectionChanged"/>
         </DockPanel>
 
     </Grid>

@@ -71,9 +71,7 @@ public partial class MainWindow : Window
        
         Employee.AddClient(Storage, client);
 
-        Clients_Grid.ItemsSource = null;
-        Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
-
+        Refresh_Clients_Grid();
 
 
         FirstName_TextBox.Text = null;
@@ -83,4 +81,23 @@ public partial class MainWindow : Window
         Phone_TextBox.Text = null;
     }
 
+    private void Clients_Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var client = Clients_Grid.SelectedItem as Client;
+        Change_LastName_TextBox.Text = client?.LastName;
+    }
+
+    private void Change_LastName_Button_Click(object sender, RoutedEventArgs e)
+    {
+        var client = Storage.Clients[Clients_Grid.SelectedIndex];
+        Employee.ChangeLastName(client, Change_LastName_TextBox.Text);
+
+        Refresh_Clients_Grid();
+    }
+
+    private void Refresh_Clients_Grid()
+    {
+        Clients_Grid.ItemsSource = null;
+        Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
+    }
 }
