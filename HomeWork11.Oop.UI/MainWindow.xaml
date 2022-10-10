@@ -19,14 +19,21 @@
                     <TextBlock Name ="Employee_TextBlock" Text="{Binding Employee.EmployeeKind}"></TextBlock>
                 </StatusBarItem>
             </StatusBar>
-            <Canvas Height="100" DockPanel.Dock="Bottom">
-                <TextBox x:Name="LastName_TextBox" Width="62" Canvas.Left="10" Canvas.Top="42" HorizontalAlignment="Left" RenderTransformOrigin="-3.129,1.028" VerticalAlignment="Center"/>
-                <TextBox x:Name="FirstName_TextBox" Canvas.Left="91" Canvas.Top="42" Width="62" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBox x:Name="MiddleName_TextBox" Canvas.Left="177" Canvas.Top="44" Width="60" HorizontalAlignment="Left" Height="18" VerticalAlignment="Center"/>
-                <TextBox x:Name="Phone_TextBox" Canvas.Left="10" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox x:Name="Passport_TextBox" Canvas.Left="162" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Button x:Name="Apply_Button" Content="Применить" Canvas.Left="332" Canvas.Top="41" Click="Apply_Button_Click"/>
-            </Canvas>
+            <TabControl Height="140"  DockPanel.Dock="Bottom">
+                <TabItem Header="Добавление">
+                    <Canvas Height="100" >
+                        <TextBox x:Name="LastName_TextBox" Width="62" Canvas.Left="10" Canvas.Top="42" HorizontalAlignment="Left" RenderTransformOrigin="-3.129,1.028" VerticalAlignment="Center"/>
+                        <TextBox x:Name="FirstName_TextBox" Canvas.Left="91" Canvas.Top="42" Width="62" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBox x:Name="MiddleName_TextBox" Canvas.Left="177" Canvas.Top="44" Width="60" HorizontalAlignment="Left" Height="18" VerticalAlignment="Center"/>
+                        <TextBox x:Name="Phone_TextBox" Canvas.Left="10" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Passport_TextBox" Canvas.Left="162" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Button x:Name="Apply_Button" Content="Добавить" Canvas.Left="332" Canvas.Top="41" Click="Apply_Button_Click"/>
+                    </Canvas>
+                </TabItem>
+                <TabItem Header="Редактирование">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
             <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True"/>
         </DockPanel>
 
