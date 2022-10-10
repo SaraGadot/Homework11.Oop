@@ -85,6 +85,7 @@ public partial class MainWindow : Window
     {
         var client = Clients_Grid.SelectedItem as Client;
         Change_LastName_TextBox.Text = client?.LastName;
+        Change_FirstName_TextBox.Text = client?.FirstName;
     }
 
     private void Change_LastName_Button_Click(object sender, RoutedEventArgs e)
@@ -99,5 +100,14 @@ public partial class MainWindow : Window
     {
         Clients_Grid.ItemsSource = null;
         Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
+    }
+
+    private void Change_FirstName_Button_Click(object sender, RoutedEventArgs e)
+    {
+        var client = Storage.Clients[Clients_Grid.SelectedIndex];
+        Employee.ChangeFirstName(client, Change_FirstName_TextBox.Text);
+
+        Refresh_Clients_Grid();
+
     }
 }
