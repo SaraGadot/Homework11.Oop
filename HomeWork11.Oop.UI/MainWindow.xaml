@@ -27,7 +27,7 @@
                 <TextBox x:Name="Passport_TextBox" Canvas.Left="162" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Button x:Name="Apply_Button" Content="Применить" Canvas.Left="332" Canvas.Top="41" Click="Apply_Button_Click"/>
             </Canvas>
-            <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            <DataGrid x:Name="Clients_Grid" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True"/>
         </DockPanel>
 
     </Grid>
