@@ -87,6 +87,8 @@ public partial class MainWindow : Window
         Change_LastName_TextBox.Text = client?.LastName;
         Change_FirstName_TextBox.Text = client?.FirstName;
         Change_MiddleName_TextBox.Text = client?.MiddleName;
+        Change_Phone_TextBox.Text = client?.Phone;
+        Change_Passport_TextBox.Text = client?.Passport;
     }
 
     private void Change_LastName_Button_Click(object sender, RoutedEventArgs e)
@@ -116,6 +118,24 @@ public partial class MainWindow : Window
     {
         var client = Storage.Clients[Clients_Grid.SelectedIndex];
         Employee.ChangeMiddleName(client, Change_MiddleName_TextBox.Text);
+
+        Refresh_Clients_Grid();
+
+    }
+
+    private void Change_Phone_Button_Click(object sender, RoutedEventArgs e)
+    {
+        var client = Storage.Clients[Clients_Grid.SelectedIndex];
+        Employee.ChangePhone(client, Change_Phone_TextBox.Text);
+
+        Refresh_Clients_Grid();
+
+    }
+
+    private void Change_Passport_Button_Click(object sender, RoutedEventArgs e)
+    {
+        var client = Storage.Clients[Clients_Grid.SelectedIndex];
+        Employee.ChangePassport(client, Change_Passport_TextBox.Text);
 
         Refresh_Clients_Grid();
 
