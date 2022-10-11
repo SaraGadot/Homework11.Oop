@@ -36,6 +36,8 @@
                         <Button x:Name="Change_LastName_Button" Content="Изменить фамилию" Canvas.Left="216" Canvas.Top="8" Click="Change_LastName_Button_Click"/>
                         <TextBox x:Name="Change_FirstName_TextBox" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="35" Width="120"/>
                         <Button x:Name="Change_FirstName_Button"  Content="Изменить имя" Canvas.Left="216" Canvas.Top="33" Click="Change_FirstName_Button_Click"/>
+                        <TextBox x:Name="Change_MiddleName_TextBox"  Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="60" Width="120"/>
+                        <Button x:Name="Change_MiddleName_Button"   Content="Изменить отчество" Canvas.Left="216" Canvas.Top="58" Click="Change_MiddleName_Button_Click" />
                     </Canvas>
                 </TabItem>
             </TabControl>
