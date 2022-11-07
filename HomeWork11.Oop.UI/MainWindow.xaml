@@ -22,12 +22,17 @@
             <TabControl Height="180"  DockPanel.Dock="Bottom">
                 <TabItem Header="Добавление">
                     <Canvas Height="160" >
-                        <TextBox x:Name="LastName_TextBox" Width="62" Canvas.Left="10" Canvas.Top="42" HorizontalAlignment="Left" RenderTransformOrigin="-3.129,1.028" VerticalAlignment="Center"/>
-                        <TextBox x:Name="FirstName_TextBox" Canvas.Left="91" Canvas.Top="42" Width="62" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBox x:Name="MiddleName_TextBox" Canvas.Left="177" Canvas.Top="44" Width="60" HorizontalAlignment="Left" Height="18" VerticalAlignment="Center"/>
-                        <TextBox x:Name="Phone_TextBox" Canvas.Left="10" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Passport_TextBox" Canvas.Left="162" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <Button x:Name="Apply_Button" Content="Добавить" Canvas.Left="332" Canvas.Top="41" Click="Apply_Button_Click"/>
+                        <TextBox x:Name="LastName_TextBox" Width="81" Canvas.Left="10" Canvas.Top="42" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBox x:Name="FirstName_TextBox" Canvas.Left="110" Canvas.Top="43" Width="62" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBox x:Name="MiddleName_TextBox" Canvas.Left="192" Canvas.Top="43" Width="81" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Phone_TextBox" Canvas.Left="10" Canvas.Top="81" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Passport_TextBox" Canvas.Left="153" Canvas.Top="81" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Button x:Name="Apply_Button" Content="Добавить" Canvas.Left="319" Canvas.Top="79" Click="Apply_Button_Click" RenderTransformOrigin="-0.174,2.427"/>
+                        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Фамилия" Canvas.Top="28"/>
+                        <TextBlock Canvas.Left="110" TextWrapping="Wrap" Text="Имя" Canvas.Top="28" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <TextBlock Canvas.Left="192" TextWrapping="Wrap" Text="Отчество" Canvas.Top="28" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Телефон" Canvas.Top="64"/>
+                        <TextBlock Canvas.Left="153" TextWrapping="Wrap" Text="Паспорт" Canvas.Top="64"/>
                     </Canvas>
                 </TabItem>
                 <TabItem Header="Редактирование">
