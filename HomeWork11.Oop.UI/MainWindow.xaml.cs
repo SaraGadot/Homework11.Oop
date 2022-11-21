@@ -80,6 +80,8 @@ public partial class MainWindow : Window
         var client = Storage.Clients[Clients_Grid.SelectedIndex];
         Employee.ChangeLastName(client, Change_LastName_TextBox.Text);
 
+        Storage.Save();
+
         Refresh_Clients_Grid();
     }
 
@@ -94,6 +96,8 @@ public partial class MainWindow : Window
         var client = Storage.Clients[Clients_Grid.SelectedIndex];
         Employee.ChangeFirstName(client, Change_FirstName_TextBox.Text);
 
+        Storage.Save();
+
         Refresh_Clients_Grid();
 
     }
@@ -102,6 +106,8 @@ public partial class MainWindow : Window
     {
         var client = Storage.Clients[Clients_Grid.SelectedIndex];
         Employee.ChangeMiddleName(client, Change_MiddleName_TextBox.Text);
+
+        Storage.Save();
 
         Refresh_Clients_Grid();
 
@@ -112,6 +118,8 @@ public partial class MainWindow : Window
         var client = Storage.Clients[Clients_Grid.SelectedIndex];
         Employee.ChangePhone(client, Change_Phone_TextBox.Text);
 
+        Storage.Save();
+
         Refresh_Clients_Grid();
 
     }
@@ -120,6 +128,8 @@ public partial class MainWindow : Window
     {
         var client = Storage.Clients[Clients_Grid.SelectedIndex];
         Employee.ChangePassport(client, Change_Passport_TextBox.Text);
+
+        Storage.Save();
 
         Refresh_Clients_Grid();
 
