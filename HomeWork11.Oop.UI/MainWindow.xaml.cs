@@ -13,25 +13,7 @@ public partial class MainWindow : Window
         InitializeComponent();
         this.DataContext = this;
 
-        Storage.AddClient(new Client()
-        {
-            FirstName = "Иван",
-            MiddleName = "Иванович",
-            LastName = "Иванов",
-            Passport = "4502 451269",
-            Phone = "89031450566"
-        }
-        );
-
-        Storage.AddClient(new Client()
-        {
-            FirstName = "Мария",
-            MiddleName = "Петровна",
-            LastName = "Сидорова",
-            Passport = "4502 451345",
-            Phone = "89031650561"
-        }
-        );
+        Storage = ClientStorage.Load();
 
         Clients_Grid.ItemsSource = Employee.View(Storage.Clients);
     }
@@ -70,6 +52,8 @@ public partial class MainWindow : Window
         };
        
         Employee.AddClient(Storage, client);
+
+        Storage.Save();
 
         Refresh_Clients_Grid();
 
